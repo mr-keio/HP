@@ -7317,8 +7317,27 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-size: 40px;
   letter-spacing: 6px; }
 
-.third .describe {
+.third .describe,
+.contact .describe {
   margin-top: 25px; }
-  .third .describe p {
+  .third .describe p,
+  .contact .describe p {
     font-size: 22px;
     font-weight: 600; }
+
+.contact .describe {
+  margin-top: 100px; }
+  .contact .describe p {
+    text-align: center; }
+  .contact .describe #contact_button {
+    margin: 0 auto;
+    display: block;
+    border: solid #001E62 4px;
+    padding: 15px 40px;
+    font-size: 22px;
+    color: #001E62;
+    border-radius: 10px;
+    font-weight: 600; }
+    .contact .describe #contact_button:hover {
+      color: #fff;
+      background-color: #001E62; }

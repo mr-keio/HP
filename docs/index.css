@@ -7070,9 +7070,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 .content {
   height: auto;
   margin-top: 150px; }
-  .content.first {
+  .content.second {
     margin-top: 100px; }
-    .content.first h3 {
+    .content.second h3 {
       text-align: center; }
   .content .title {
     height: 20px;
@@ -7305,8 +7305,20 @@ h1, h2, h3, h4, h5, h6, p, a {
             line-height: 20px;
             font-size: 20px; }
 
-.second .describe {
+.first .describe img {
+  margin: 0 auto;
+  display: block; }
+
+.first .describe h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 6px; }
+
+.third .describe {
   margin-top: 25px; }
-  .second .describe p {
+  .third .describe p {
     font-size: 22px;
     font-weight: 600; }

@@ -7287,8 +7287,7 @@ h1, h2, h3, h4, h5, h6, p, a {
           font-family: 'Roboto', sans-serif;
           margin-bottom: 0; } }
   .content .describe {
-    height: auto;
-    margin-top: 75px; }
+    height: auto; }
     .content .describe .sub_title {
       height: auto;
       margin-bottom: 25px; }
@@ -7315,17 +7314,80 @@ h1, h2, h3, h4, h5, h6, p, a {
             line-height: 20px;
             font-size: 20px; }
 
-.first .describe img {
-  margin: 0 auto;
-  display: block; }
-
-.first .describe h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  letter-spacing: 6px; }
+.first {
+  margin-top: 50px; }
+  .first .describe {
+    margin-top: 0; }
+    .first .describe img {
+      margin: 0 auto 0 auto;
+      display: block; }
+    .first .describe h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      letter-spacing: 6px; }
+  @media (min-width: 576px) {
+    .first {
+      margin-top: 50px; }
+      .first .describe {
+        margin-top: 10px; }
+        .first .describe img {
+          margin: 0 auto 10px auto;
+          display: block; }
+        .first .describe h2 {
+          text-align: center;
+          margin-bottom: 25px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 6px; } }
+  @media (min-width: 768px) {
+    .first {
+      margin-top: 75px; }
+      .first .describe {
+        margin-top: 15px; }
+        .first .describe img {
+          margin: 0 auto 15px auto;
+          display: block; }
+        .first .describe h2 {
+          text-align: center;
+          margin-bottom: 37.5px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 6px; } }
+  @media (min-width: 992px) {
+    .first {
+      margin-top: 100px; }
+      .first .describe {
+        margin-top: 25px; }
+        .first .describe img {
+          margin: 0 auto 25px auto;
+          display: block; }
+        .first .describe h2 {
+          text-align: center;
+          margin-bottom: 50px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 6px; } }
+  @media (min-width: 1200px) {
+    .first {
+      margin-top: 125px; }
+      .first .describe {
+        margin-top: 50px; }
+        .first .describe img {
+          margin: 0 auto 50px auto;
+          display: block; }
+        .first .describe h2 {
+          text-align: center;
+          margin-bottom: 62.5px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 6px; } }
 
 .third .describe,
 .contact .describe {

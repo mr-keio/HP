@@ -14162,13 +14162,15 @@ p {
   height: auto;
   margin-top: 150px; }
   .contents > .Home .logo {
-    height: 250px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    .contents > .Home .logo svg {
+      height: 300px; }
     .contents > .Home .logo .image {
       height: 100%;
       width: auto;
@@ -14214,6 +14216,22 @@ p {
       float: left; }
   .content .sub_title {
     margin-bottom: 60px; }
+  .content .contact_button {
+    width: 10em;
+    height: 2em;
+    margin: 100px auto 0 auto; }
+    .content .contact_button button {
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      border: solid #001e62 2px; }
+      .content .contact_button button:hover {
+        background-color: #001e62; }
+        .content .contact_button button:hover h2 {
+          color: #fff; }
+      .content .contact_button button h2 {
+        margin: 0;
+        letter-spacing: 0; }
 
 .apply p {
   border-bottom: 2px solid #001e62; }
@@ -14269,6 +14287,9 @@ p {
   .strong h2.strong {
     font-size: 1.2em; }
 
+.vision_shadow {
+  text-shadow: 1px 1px 1px #000; }
+
 .about .inner {
   width: 80%;
   margin: 10%; }
@@ -14282,13 +14303,3 @@ p {
 
 .contact p {
   text-align: center; }
-
-.contact .contact_button {
-  width: 10em;
-  height: 2em;
-  margin: 0 auto; }
-  .contact .contact_button button {
-    height: 100%;
-    width: 100%; }
-    .contact .contact_button button h2 {
-      margin: 0; }

@@ -1,0 +1,40 @@
+.navbar {
+  padding: 0 !important;
+  height: 2em;
+  opacity: 0.9;
+
+  .navbar-collapse {
+    background-color: rgba(#fafafa, 0.9);
+  }
+
+  button {
+    height: 100%;
+    padding: 10px;
+    border: 0;
+
+    span {
+      height: 100%;
+    }
+  }
+
+  .navbar-nav li {
+    margin: 0;
+
+    a {
+      padding: 0;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .navbar-collapse li {
+    margin: 8px 0;
+
+    p {
+      font-size: 0.7em;
+      text-align: center;
+    }
+  }
+}

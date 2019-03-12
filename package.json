@@ -1,0 +1,45 @@
+{
+  "name": "@taka-sho/HP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:pug": "pug pug/*.pug -o dist",
+    "build:scss": "node-sass -r scss -o dist",
+    "build:images": "cpx 'assets/*' dist/assets",
+    "lint": "run-p lint:*",
+    "lint:pug": "pug-lint -c .pug-lintrc pug/index.pug",
+    "lint:scss": "stylelint sass/**/*.sass",
+    "watch": "run-p watch:*",
+    "watch:pug": "pug pug/*.pug -w -o dist",
+    "watch:scss": "node-sass -r scss -w -o dist/",
+    "watch:images": "cpx 'assets/*' dist/assets --watch",
+    "prebuild": "rimraf dist",
+    "prewatch": "yarn run build"
+  },
+  "repository": "git+https://github.com/mr-keio/HP.git",
+  "keywords": [],
+  "author": "taka-sho <takasho530000@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr-keio/HP/issues"
+  },
+  "homepage": "https://github.com/mr-keio/HP#readme",
+  "devDependencies": {
+    "@takasho/stylelint-config": "^1.0.0",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-uncovertruth": "^4.2.0",
+    "rimraf": "^2.6.3",
+    "stylelint": "^9.10.1",
+    "stylelint-scss": "^3.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fallback-custom-scheme": "^0.1.4"
+  }
+}

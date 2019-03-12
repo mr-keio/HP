@@ -1,0 +1,6 @@
+{
+  "extends": "@takasho/stylelint-config",
+   "plugins": [
+    "stylelint-scss"
+  ]
+}

@@ -1,0 +1,19 @@
+extends ../common/_content-layout.pug
+include ../mixins/_content.pug
+
+block title
+  +title('CONTACT')
+
+block sub_title
+
+block main
+  .contact
+    p ミスター慶應コンテスト2019へのお問い合わせにつきましては
+      br
+      | 以下のフォームより願い致します。
+    .contact_button
+      button(
+        type='button'
+        class='btn btn-outline-dark'
+      )
+        h2 お問い合わせ

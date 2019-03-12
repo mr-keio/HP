@@ -1,0 +1,49 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.content .title {
+  height: 20px;
+
+  .text {
+    margin-top: 5px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .content .title {
+    height: 20px;
+
+    .text {
+      margin-top: 5px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .content .title {
+    height: 20px;
+
+    .text {
+      margin-top: 5px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .content .title {
+    height: 30px;
+
+    .text {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .content .title {
+    height: 30px;
+
+    .text {
+      margin-top: 10px;
+    }
+  }
+}

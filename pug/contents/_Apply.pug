@@ -1,0 +1,46 @@
+extends ../common/_content-layout.pug
+include ../mixins/_content.pug
+
+mixin first_progress (title)
+  .col-12.col-sm-12.col-md-3.col-lg-3.col-xl-3
+    .d-md-none
+      svg(x=0 y=0 viewBox='0 0 50 75')
+        polygon(
+          points="0 0, 0 50, 25 75, 50 50, 50 0, 0 0"
+          fill="#001e62"
+        )
+    p #{title}
+    .d-none.d-md-block
+      svg(x=0 y=0 viewBox='0 0 200 50')
+        polygon(
+          points="0 0,0 50, 175 50, 200 25, 175 0, 0 0"
+          fill="#001e62"
+        )
+mixin progress (title)
+  .col-12.col-sm-12.col-md-3.col-lg-3.col-xl-3
+    .d-md-none
+      svg(x=0 y=0 viewBox='0 0 50 75')
+        polygon(
+          points="0 0, 0 50, 25 75, 50 50, 50 0, 25 25, 0 0"
+          fill="#ddd"
+        )
+    p #{title}
+    .d-none.d-md-block
+      svg(x=0 y=0 viewBox='0 0 200 50')
+        polygon(
+          points="0 0, 25 25, 0 50, 175 50, 200 25, 175 0, 0 0"
+          fill="#ddd"
+        )
+
+block title
+  +title('APPLY')
+
+block sub_title
+
+block main
+  .apply.row.no-gutters
+    +first_progress('書類/動画選考')
+    +progress('１次面接')
+    +progress('２次面接')
+    +progress('最終面接')
+

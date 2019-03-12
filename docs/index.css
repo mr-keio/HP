@@ -7051,7 +7051,17 @@ a.text-dark:hover, a.text-dark:focus {
       margin-top: 10px; } }
 
 .navbar {
-  padding: 5px 0; }
+  padding: 0 !important;
+  height: 2em;
+  opacity: 0.9; }
+  .navbar .navbar-collapse {
+    background-color: rgba(250, 250, 250, 0.9); }
+  .navbar button {
+    height: 100%;
+    padding: 10px;
+    border: 0; }
+    .navbar button span {
+      height: 100%; }
   .navbar .navbar-nav li {
     margin: 0; }
     .navbar .navbar-nav li a {
@@ -14099,7 +14109,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html {
-  font-size: 20px; }
+  font-size: 25px; }
 
 h1,
 h2,
@@ -14131,7 +14141,7 @@ p {
 
 @media (min-width: 576px) {
   html {
-    font-size: 20px; } }
+    font-size: 25px; } }
 
 @media (min-width: 768px) {
   html {
@@ -14258,6 +14268,10 @@ p {
   font-size: 1.2em; }
   .strong h2.strong {
     font-size: 1.2em; }
+
+.about .inner {
+  width: 80%;
+  margin: 10%; }
 
 .about p {
   text-align: center; }

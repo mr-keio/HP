@@ -1,3 +1,5 @@
+import { loadavg } from "os";
+
 // $(function () {
 //   if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
 //       $("a[href*='twitter.com']").each(function () {
@@ -15,12 +17,16 @@
 $(document).ready(function () {
   $("a[href*='twitter.com']").click(function () {
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-      location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
+      const before = location.href
+      location.href = 'twitter://post?message=Mr.KEIO CONTEST 2019 HP'
+      if (before === location.href) {
+        location.href = 'https://twitter.com/intent/tweet?text=Mr.KEIO CONTEST 2019 HP'
+      }
       // location.href = 'twitter://'
-      setTimeout(function () {
-        location.href = 'https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000'
+      // setTimeout(function () {
+        // location.href = 'https://twitter.com/intent/tweet?text=Mr.KEIO CONTEST 2019 HP'
         // open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
-      }, 500)
+      // }, 500)
     } else {
       open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')
     }

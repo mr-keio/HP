@@ -15,8 +15,8 @@
 $(document).ready(function () {
   $("a[href*='twitter.com']").click(function () {
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-      // location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
-      location.href = 'twitter://'
+      location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
+      // location.href = 'twitter://'
       setTimeout(function () {
         location.href = 'https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000'
         // open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  

@@ -14168,8 +14168,6 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .contents > .Home .logo svg {
-      height: 300px; }
     .contents > .Home .logo .image {
       height: 100%;
       width: auto;
@@ -14233,7 +14231,9 @@ p {
         letter-spacing: 0; }
 
 .Home {
-  margin-top: 90px; }
+  margin-top: 120px; }
+  .Home svg {
+    height: 200px; }
 
 .apply p {
   border-bottom: 2px solid #001e62; }
@@ -14244,7 +14244,9 @@ p {
 
 @media (min-width: 576px) {
   .Home {
-    margin-top: 90px; }
+    margin-top: 120px; }
+    .Home svg {
+      height: 200px; }
   .title {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -14253,7 +14255,9 @@ p {
 
 @media (min-width: 768px) {
   .Home {
-    margin-top: 100px; }
+    margin-top: 120px; }
+    .Home svg {
+      height: 200px; }
   .title {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -14262,7 +14266,9 @@ p {
 
 @media (min-width: 992px) {
   .Home {
-    margin-top: 120px; }
+    margin-top: 150px; }
+    .Home svg {
+      height: 300px; }
   .title {
     margin-top: 120px;
     margin-bottom: 80px; }
@@ -14272,6 +14278,8 @@ p {
 @media (min-width: 1200px) {
   .Home {
     margin-top: 150px; }
+    .Home svg {
+      height: 300px; }
   .title {
     margin-top: 150px;
     margin-bottom: 100px; }

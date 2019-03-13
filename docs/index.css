@@ -7053,9 +7053,9 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar {
   padding: 0 !important;
   height: 2em;
-  opacity: 0.9; }
+  opacity: 0.99; }
   .navbar .navbar-collapse {
-    background-color: rgba(250, 250, 250, 0.9); }
+    background-color: rgba(250, 250, 250, 0.99); }
   .navbar button {
     height: 100%;
     padding: 10px;
@@ -14159,8 +14159,7 @@ p {
   text-align: center; }
 
 .contents > .Home {
-  height: auto;
-  margin-top: 150px; }
+  height: auto; }
   .contents > .Home .logo {
     height: auto;
     display: -webkit-box;
@@ -14233,27 +14232,37 @@ p {
         margin: 0;
         letter-spacing: 0; }
 
+.Home {
+  margin-top: 90px; }
+
 .apply p {
   border-bottom: 2px solid #001e62; }
 
 .title {
+  margin-top: 50px;
   margin-bottom: 50px; }
 
 @media (min-width: 576px) {
+  .Home {
+    margin-top: 90px; }
   .title {
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 50px; }
   .apply p {
     border-bottom: 2px solid #001e62; } }
 
 @media (min-width: 768px) {
+  .Home {
+    margin-top: 100px; }
   .title {
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 50px; }
   .apply p {
     border-bottom: none; } }
 
 @media (min-width: 992px) {
+  .Home {
+    margin-top: 120px; }
   .title {
     margin-top: 120px;
     margin-bottom: 80px; }
@@ -14261,6 +14270,8 @@ p {
     border-bottom: none; } }
 
 @media (min-width: 1200px) {
+  .Home {
+    margin-top: 150px; }
   .title {
     margin-top: 150px;
     margin-bottom: 100px; }

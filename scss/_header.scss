@@ -1,10 +1,30 @@
 .navbar {
   padding: 0 !important;
   height: 2em;
-  opacity: 0.9;
+  opacity: 0.95;
+
+  .navbar-brand {
+    height: 100%;
+    margin-left: 0.5em;
+    margin-right: 0;
+    padding: 0.3em 0;
+
+    svg {
+      height: 100%;
+      float: left;
+    }
+
+    p {
+      font-size: 0.6em;
+      line-height: 1.7em;
+      margin-left: 0.4em;
+      float: left;
+      letter-spacing: 0.05em;
+    }
+  }
 
   .navbar-collapse {
-    background-color: rgba(#fafafa, 0.9);
+    background-color: rgba(#fafafa, 0.99);
   }
 
   button {
@@ -17,14 +37,18 @@
     }
   }
 
-  .navbar-nav li {
-    margin: 0;
+  .navbar-nav {
+    margin: 0 auto;
 
-    a {
-      padding: 0;
+    li {
+      margin: 0;
 
-      p {
-        margin: 0;
+      a {
+        padding: 0;
+
+        p {
+          margin: 0;
+        }
       }
     }
   }
@@ -35,6 +59,60 @@
     p {
       font-size: 0.7em;
       text-align: center;
+    }
+  }
+
+  .show ul li a,
+  .collapsing ul li a {
+    padding: 0.4em 0;
+  }
+
+  .show ul {
+    box-shadow: 0 2px 2px rgba(#888, 0.4);
+  }
+}
+
+.social_icons {
+  width: auto;
+  height: auto;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  background-color: #fcfcfc;
+  z-index: 100;
+  border: solid 1px #001e62;
+  border-radius: 3px;
+  box-sizing: content-box;
+  box-shadow: 0 0 3px rgba(#555, .8);
+  animation: dis 3s;
+
+  @keyframes dis {
+    0% { opacity: 0; }
+    75% {opacity: 0;}
+    100% { opacity: 1; }
+  }
+
+  p {
+    margin: 0.2em 0 0 0;
+    text-align: center;
+  }
+
+  .icon {
+    width: 1.4em;
+    height: 1.4em;
+    margin: 0.2em 0.4em;
+    float: left;
+
+    a {
+      height: 100%;
+      width: 100%;
+      float: left;
+
+      img {
+        height: 100%;
+        width: auto;
+        float: left;
+      }
     }
   }
 }

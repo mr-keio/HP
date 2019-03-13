@@ -1,6 +1,24 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
   a.navbar-brand(href='#')
+    svg(x=0 y=0 viewBox='0 0 200 400')
+      polygon(
+        points="0 0,0 160, 30 160, 30 80, 100 160, 170 80, 170 160, 200 160, 200 0, 100 120"
+        fill="#001e62"
+      )
+      polygon(
+        points="0 190, 0 220, 200 220, 200 190"
+        fill='#001e62'
+      )
+      polygon(
+        points="0 250, 0 280, 200 280, 200 250"
+        fill='#C63527'
+      )
+      polygon(
+        points="0 310, 0 340, 200 340, 200 310"
+        fill='#001e62'
+      )
     //- img.d-inline-block.align-top(src='./assets/logo.png')
+    p.d-md-none Mr.KEIO CONTEST 2019
   button.navbar-toggler(
     type='button'
     data-toggle='collapse'
@@ -14,31 +32,33 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
   div.collapse.navbar-collapse.links#navbarSupportedContent
     ul.navbar-nav.mr-auto
       li.nav-item
-        a.nav-link(href='#') 
+        a.nav-link(href='#home') 
           p HOME
       li.nav-item
-        a.nav-link(href='#')
+        a.nav-link(href='#vision')
           p VISION
       li.nav-item
-        a.nav-link(href='#')
+        a.nav-link(href='#about')
           p ABOUT
       li.nav-item
-        a.nav-link(href='#')
+        a.nav-link(href='#apply')
           p APPLY
       li.nav-item
-        a.nav-link(href='#')
+        a.nav-link(href='#recruit')
           p RECRUIT
       li.nav-item
-        a.nav-link(href='#')
+        a.nav-link(href='#contact')
           p CONTACT
 
-    //- .social_icons
-      .icon.twitter_icon
-        a(href='twitter://post?message=Mr.KEIO CONTEST HP')
-          img(src='./assets/twitter_logo.svg')
-      .icon.facebook_icon
-        a(href='#')
-          img(src='./assets/facebook_logo.svg')
-      .icon.line_icon
-        a(href='#')
-          img(src='./assets/line_icon.png')
+.social_icons
+  p シェア
+  .icon.twitter
+    //- a(href='twitter://post?message=Mr.KEIO CONTEST HP')
+    a(href='https://twitter.com' target='_blank')
+      img(src='./assets/twitter_Logo.png')
+  .icon.facebook
+    a(href='#')
+      img(src='./assets/facebook_logo.svg')
+  .icon.line
+    a(href='#')
+      img(src='./assets/line_icon.png')

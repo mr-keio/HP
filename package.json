@@ -8,6 +8,7 @@
     "build:pug": "pug pug/*.pug -o dist",
     "build:scss": "node-sass -r scss -o dist",
     "build:images": "cpx 'assets/*' dist/assets",
+    "build:js": "cpx 'js/*' dist/js",
     "lint": "run-p lint:*",
     "lint:pug": "pug-lint -c .pug-lintrc pug/index.pug",
     "lint:scss": "stylelint sass/**/*.sass",
@@ -15,6 +16,7 @@
     "watch:pug": "pug pug/*.pug -w -o dist",
     "watch:scss": "node-sass -r scss -w -o dist/",
     "watch:images": "cpx 'assets/*' dist/assets --watch",
+    "watch:js": "cpx 'js/*' dist/js --watch",
     "prebuild": "rimraf dist",
     "prewatch": "yarn run build"
   },

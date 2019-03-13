@@ -15,16 +15,11 @@
 $(document).ready(function () {
   $("a[href*='twitter.com']").click(function () {
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-      // try {
-        // location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
-        location.href = 'twitter://'
-        
-      // } catch {
-        // open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
-      // }
-      // setTimeout(function () {
-      //   open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
-      // }, 500)
+      // location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
+      location.href = 'twitter://'
+      setTimeout(function () {
+        open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
+      }, 500)
     } else {
       open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')
     }

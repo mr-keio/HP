@@ -14,15 +14,20 @@
 //   });
 $(document).ready(function () {
   $("a[href*='twitter.com']").click(function () {
-    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-      // location.href = 'twitter://post?message=Mr.KEIO CONTEST HP'
-      location.href = 'twitter://'
+    // if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
+      // const before = location.href
+      // location.href = 'twitter://post?message=Mr.KEIO CONTEST 2019 HP'
+      // if (before === location.href) {
+        // location.href = 'https://twitter.com/intent/tweet?text=Mr.KEIO CONTEST 2019 HP'
+      // }
+      // location.href = 'twitter://'
       // setTimeout(function () {
-      //   open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
+        // location.href = 'https://twitter.com/intent/tweet?text=Mr.KEIO CONTEST 2019 HP'
+        // open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')  
       // }, 500)
-    } else {
-      open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')
-    }
+    // } else {
+    open('https://twitter.com/intent/tweet?url=asdf.com&text=テキスト&via=takasho53000&hashtags=#test&related=takasho53000', '_blank')
+    // }
     return false
   })
 })

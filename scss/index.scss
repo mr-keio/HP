@@ -20,17 +20,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-
-    .image {
-      height: 100%;
-      width: auto;
-      margin: 0 auto;
-
-      img {
-        height: 100%;
-        width: auto;
-      }
-    }
   }
 
   .title {
@@ -47,6 +36,15 @@
       line-height: 1.5em;
     }
   }
+}
+
+#recruit_strong .sub_title h2 .under_line {
+  color: rgba(#000, 0);
+  background-image: url(./assets/strong.png);
+  background-position: top;
+  background-size: 100% 0.5em;
+  // background-attachment: fixed;
+  background-repeat: repeat-x;
 }
 
 // $content_title_height:30px;
@@ -87,7 +85,12 @@
   }
 
   .sub_title {
-    margin-bottom: 60px;
+    margin-bottom: 0;
+
+    .under_line {
+      color: rgba(#000, 0);
+      text-shadow: none;
+    }
   }
 
   .contact_button {

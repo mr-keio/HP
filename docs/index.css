@@ -14236,6 +14236,13 @@ p {
       text-align: center;
       line-height: 1.5em; }
 
+#recruit_strong .sub_title h2 .under_line {
+  color: rgba(0, 0, 0, 0);
+  background-image: url(./assets/strong.png);
+  background-position: top;
+  background-size: 100% 0.5em;
+  background-repeat: repeat-x; }
+
 .content {
   margin-bottom: 100px;
   padding-left: 0;
@@ -14262,6 +14269,9 @@ p {
       float: left; }
   .content .sub_title {
     margin-bottom: 60px; }
+    .content .sub_title .under_line {
+      color: rgba(0, 0, 0, 0);
+      text-shadow: none; }
   .content .contact_button {
     width: 10em;
     height: 2em;

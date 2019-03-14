@@ -14268,7 +14268,7 @@ p {
       width: auto;
       float: left; }
   .content .sub_title {
-    margin-bottom: 60px; }
+    margin-bottom: 0; }
     .content .sub_title .under_line {
       color: rgba(0, 0, 0, 0);
       text-shadow: none; }

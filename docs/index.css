@@ -14164,10 +14164,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-@font-face {
-  font-family: 'sf-pro';
-  src: "./assets/SF-Pro.otf" format("opentype"); }
-
 html {
   font-size: 25px; }
 
@@ -14179,7 +14175,7 @@ h5,
 p,
 a {
   color: #001e62;
-  font-family: 'sf-pro'; }
+  font-family: -apple-system, 'BlinkMacSystemFont', Sans-Serif; }
 
 h1 {
   font-size: 1em !important;

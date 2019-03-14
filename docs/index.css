@@ -7024,19 +7024,19 @@ a.text-dark:hover, a.text-dark:focus {
 .content .title {
   height: 20px; }
   .content .title .text {
-    margin-top: 5px; }
+    margin-top: 8px; }
 
 @media (min-width: 576px) {
   .content .title {
     height: 20px; }
     .content .title .text {
-      margin-top: 5px; } }
+      margin-top: 8px; } }
 
 @media (min-width: 768px) {
   .content .title {
     height: 20px; }
     .content .title .text {
-      margin-top: 5px; } }
+      margin-top: 8px; } }
 
 @media (min-width: 992px) {
   .content .title {
@@ -7059,9 +7059,6 @@ a.text-dark:hover, a.text-dark:focus {
     margin-left: 0.5em;
     margin-right: 0;
     padding: 0.3em 0; }
-    .navbar .navbar-brand svg {
-      height: 100%;
-      float: left; }
     .navbar .navbar-brand p {
       font-size: 0.6em;
       line-height: 1.7em;
@@ -7103,10 +7100,10 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0.5em;
   background-color: #fcfcfc;
   z-index: 100;
-  border: solid 1px #001e62;
+  border: solid 0.5px #bbb;
   border-radius: 3px;
   box-sizing: content-box;
-  box-shadow: 0 0 3px rgba(85, 85, 85, 0.8);
+  box-shadow: 0 0 2px rgba(187, 187, 187, 0.8);
   animation: dis 3s; }
 
 @keyframes dis {
@@ -14167,6 +14164,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+@font-face {
+  font-family: 'sf-pro';
+  src: "./assets/SF-Pro.otf" format("opentype"); }
+
 html {
   font-size: 25px; }
 
@@ -14178,7 +14179,7 @@ h5,
 p,
 a {
   color: #001e62;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'sf-pro'; }
 
 h1 {
   font-size: 1em !important;
@@ -14208,7 +14209,7 @@ p {
 
 @media (min-width: 992px) {
   html {
-    font-size: 30px; } }
+    font-size: 35px; } }
 
 @media (min-width: 1200px) {
   html {
@@ -14227,13 +14228,6 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .contents > .Home .logo .image {
-      height: 100%;
-      width: auto;
-      margin: 0 auto; }
-      .contents > .Home .logo .image img {
-        height: 100%;
-        width: auto; }
   .contents > .Home .title {
     margin-top: 50px;
     display: -webkit-box;

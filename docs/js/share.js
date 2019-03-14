@@ -1,5 +1,3 @@
-import { loadavg } from "os";
-
 // $(function () {
 //   if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
 //       $("a[href*='twitter.com']").each(function () {

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   setInterval(function () {
-    var ts = countdown(new Date(2019, 3, 20)).toString()
+    var ts = countdown(new Date(2019, 4, 20)).toString()
     var result = ts
       .replace(/day/g, '日')
       .replace(/hour/g, '時間')

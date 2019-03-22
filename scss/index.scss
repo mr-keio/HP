@@ -248,12 +248,14 @@
 }
 
 .about {
+  
   .inner {
     width: 100%;
     margin: 0;
+    text-align: center;
 
     &.b {
-      border-right: solid 1px #001e62;
+      // border-right: solid 1px #001e62;
     }
   }
 

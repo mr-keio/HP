@@ -14371,9 +14371,8 @@ p {
 
 .about .inner {
   width: 100%;
-  margin: 0; }
-  .about .inner.b {
-    border-right: solid 1px #001e62; }
+  margin: 0;
+  text-align: center; }
 
 .about p {
   text-align: center;

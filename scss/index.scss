@@ -249,12 +249,17 @@
 
 .about {
   .inner {
-    width: 80%;
-    margin: 10%;
+    width: 100%;
+    margin: 0;
+
+    &.b {
+      border-right: solid 1px #001e62;
+    }
   }
 
   p {
     text-align: center;
+    height: 4em;
   }
 
   img {
@@ -267,4 +272,8 @@
   p {
     text-align: center;
   }
+}
+
+.mail {
+  font-size: 0.5em;
 }

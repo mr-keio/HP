@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  new ClipboardJS('#clip')
+    .on('success', function(e) {
+      window.alert(e.text + 'をコピーしました')
+  })
   setInterval(function () {
     var ts = countdown(new Date(2019, 4, 20)).toString()
     var result = ts

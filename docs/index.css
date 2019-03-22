@@ -7100,10 +7100,9 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0.5em;
   background-color: #fcfcfc;
   z-index: 100;
-  border: solid 0.5px #bbb;
   border-radius: 3px;
   box-sizing: content-box;
-  box-shadow: 0 0 2px rgba(187, 187, 187, 0.8);
+  box-shadow: 0 0 4px rgba(204, 204, 204, 0.6);
   animation: dis 3s; }
 
 @keyframes dis {
@@ -14175,7 +14174,9 @@ h5,
 p,
 a {
   color: #001e62;
-  font-family: -apple-system, 'BlinkMacSystemFont', Sans-Serif; }
+  font-family: -apple-system, 'BlinkMacSystemFont', Sans-Serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
 
 h1 {
   font-size: 1em !important;
@@ -14369,11 +14370,14 @@ p {
   text-shadow: 1px 1px 1px #000; }
 
 .about .inner {
-  width: 80%;
-  margin: 10%; }
+  width: 100%;
+  margin: 0; }
+  .about .inner.b {
+    border-right: solid 1px #001e62; }
 
 .about p {
-  text-align: center; }
+  text-align: center;
+  height: 4em; }
 
 .about img {
   width: 80%;
@@ -14381,3 +14385,6 @@ p {
 
 .contact p {
   text-align: center; }
+
+.mail {
+  font-size: 0.5em; }

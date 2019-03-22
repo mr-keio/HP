@@ -8,12 +8,13 @@ block sub_title
 
 block main
   .contact
-    p ミスター慶應コンテスト2019へのお問い合わせにつきましては
-      br
-      | 以下のフォームよりお願い致します。
+    p ミスター慶應コンテスト2019へのお問い合わせにつきましては、
+      span#mail_address mrkeio2019.cytron@gmail.com
+      | よりお願い致します。
     .contact_button
-      button(
+      button#clip(
         type='button'
         class='btn btn-outline-dark'
+        data-clipboard-text='mrkeio2019.cytron@gmail.com'
       )
-        h2 お問い合わせ
+        h2.mail メールアドレスをコピーする

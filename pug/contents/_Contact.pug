@@ -12,9 +12,10 @@ block main
       span#mail_address mrkeio2019.cytron@gmail.com
       | よりお願い致します。
     .contact_button
-      button#clip(
-        type='button'
-        class='btn btn-outline-dark'
-        data-clipboard-text='mrkeio2019.cytron@gmail.com'
-      )
-        h2.mail メールアドレスをコピーする
+      a(href='mailto:mrkeio2019.cytron@gmail.com?subject=Mr.KEIO CONTEST 2019のお問い合わせ')
+        button#clip(
+          type='button'
+          class='btn btn-outline-dark'
+          data-clipboard-text='mrkeio2019.cytron@gmail.com'
+        )
+          h2.mail 問い合わせる

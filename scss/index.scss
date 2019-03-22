@@ -124,6 +124,29 @@
 .Home {
   margin-top: 80px;
 
+  #countdown {
+    font-size: 1.2em;
+
+    span {
+      &:nth-child(1) {
+        color: #001e62;
+      }
+      &:nth-child(2) {
+        color: #C63527;
+      }
+      &:nth-child(3) {
+        color: #001e62;
+      }
+      &:nth-child(4) {
+        color: #C63527;
+      }
+      span {
+        font-size: 0.4em;
+        color: #001e62;
+      }
+    }
+  }
+
   svg {
     height: 200px;
   }

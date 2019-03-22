@@ -4,8 +4,8 @@ $(document).ready(function () {
       window.alert(e.text + 'をコピーしました')
   })
   setInterval(function () {
-    var ts = countdown(new Date(2019, 4, 20)).toHTML()
-    var result = ts
+    const ts = countdown(new Date(2019, 4, 20)).toHTML()
+    const result = ts
       .replace(/days|day/g, "<span>日</span>")
       .replace(/hours|hour/g, "<span>時間</span>")
       .replace(/minutes|minute/g, "<span>分</span>")

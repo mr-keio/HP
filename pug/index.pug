@@ -1,5 +1,13 @@
 doctype html
 head
+  // Global site tag (gtag.js) - Google Analytics
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-136780255-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-136780255-1');
+
   meta(charset='utf-8')
   meta(name='description' content='Mr.KEIO CONTEST 2019 のHP。2019年4月20日までファイナリストの募集をしています。')
 
@@ -40,5 +48,4 @@ body
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
   script(src='js/scroll.js')
-  script(src='js/share.js')
   script(src='js/countdown.js')

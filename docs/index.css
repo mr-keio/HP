@@ -14319,7 +14319,7 @@ p {
     -ms-filter: grayscale(90%);
     -o-filter: grayscale(90%);
     filter: grayscale(90%); }
-  .Home .ob svg {
+  .Home svg {
     height: 200px; }
 
 .apply p {

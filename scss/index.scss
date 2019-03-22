@@ -167,10 +167,9 @@ $grey: 90%;
       -o-filter: grayscale($grey);
       filter: grayscale($grey);
     }
-  
-    svg {
-      height: 200px;
-    }
+  }
+  svg {
+    height: 200px;
   }
 }
 

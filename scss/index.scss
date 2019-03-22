@@ -124,20 +124,53 @@
 .Home {
   margin-top: 80px;
 
-  #countdown {
-    font-size: 1.2em;
+  .count {
+    margin-bottom: 5em;
 
-    span {
-      color: #C63527;
+    #countdown {
+      font-size: 1.2em;
+  
       span {
-        color: #001e62;
-        font-size: 0.4em;
+        color: #C63527;
+        span {
+          color: #001e62;
+          font-size: 0.4em;
+        }
       }
     }
   }
 
-  svg {
-    height: 200px;
+$grey: 90%;
+  .ob {
+    &.last {
+      margin-bottom: 2em;
+    }
+
+    h2  {
+      font-size: 3em;
+      line-height: .9em;
+      text-align: center;
+      opacity: .4;
+      letter-spacing: 0;
+      // border-top: solid 1px #001e62;
+      // border-bottom: solid 1px #001e62;
+
+      .red {
+        color: #C63527;
+      }
+    }
+    img {
+      width: 100%;
+      -webkit-filter: grayscale($grey);
+      -moz-filter: grayscale($grey);
+      -ms-filter: grayscale($grey);
+      -o-filter: grayscale($grey);
+      filter: grayscale($grey);
+    }
+  
+    svg {
+      height: 200px;
+    }
   }
 }
 
@@ -284,6 +317,7 @@
 
 .contact {
   height: 10em;
+  margin-bottom: 1em;
   p {
     text-align: center;
   }

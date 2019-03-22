@@ -14293,14 +14293,33 @@ p {
 
 .Home {
   margin-top: 80px; }
-  .Home #countdown {
-    font-size: 1.2em; }
-    .Home #countdown span {
+  .Home .count {
+    margin-bottom: 5em; }
+    .Home .count #countdown {
+      font-size: 1.2em; }
+      .Home .count #countdown span {
+        color: #C63527; }
+        .Home .count #countdown span span {
+          color: #001e62;
+          font-size: 0.4em; }
+  .Home .ob.last {
+    margin-bottom: 2em; }
+  .Home .ob h2 {
+    font-size: 3em;
+    line-height: .9em;
+    text-align: center;
+    opacity: .4;
+    letter-spacing: 0; }
+    .Home .ob h2 .red {
       color: #C63527; }
-      .Home #countdown span span {
-        color: #001e62;
-        font-size: 0.4em; }
-  .Home svg {
+  .Home .ob img {
+    width: 100%;
+    -webkit-filter: grayscale(90%);
+    -moz-filter: grayscale(90%);
+    -ms-filter: grayscale(90%);
+    -o-filter: grayscale(90%);
+    filter: grayscale(90%); }
+  .Home .ob svg {
     height: 200px; }
 
 .apply p {
@@ -14391,7 +14410,8 @@ p {
   margin: 0 10%; }
 
 .contact {
-  height: 10em; }
+  height: 10em;
+  margin-bottom: 1em; }
   .contact p {
     text-align: center; }
 

@@ -8,12 +8,19 @@ block sub_title
 
 block main
   .contact
-    p ミスター慶應コンテスト2019へのお問い合わせにつきましては
-      br
-      | 以下のフォームよりお願い致します。
+    p ミスター慶應コンテスト2019へのお問い合わせにつきましては、
+      span#mail_address keio@mrcontest.jp
+      | よりお願い致します。
     .contact_button
-      button(
+      a(href='mailto:keio@mrcontest.jp?subject=Mr.KEIO CONTEST 2019のお問い合わせ')
+        button(
+          type='button'
+          class='btn btn-outline-dark'
+        )
+          h2.mail 問い合わせる
+      button#clip(
         type='button'
         class='btn btn-outline-dark'
+        data-clipboard-text='keio@mrcontest.jp'
       )
-        h2 お問い合わせ
+        h2.mail メールアドレスをコピーする

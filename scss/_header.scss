@@ -75,10 +75,9 @@
   right: 0.5em;
   background-color: #fcfcfc;
   z-index: 100;
-  border: solid 0.5px #bbb;
   border-radius: 3px;
   box-sizing: content-box;
-  box-shadow: 0 0 2px rgba(#bbb, .8);
+  box-shadow: 0 0 4px rgba(#ccc, .6);
   animation: dis 3s;
 
   @keyframes dis {

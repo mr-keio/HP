@@ -7100,10 +7100,9 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0.5em;
   background-color: #fcfcfc;
   z-index: 100;
-  border: solid 0.5px #bbb;
   border-radius: 3px;
   box-sizing: content-box;
-  box-shadow: 0 0 2px rgba(187, 187, 187, 0.8);
+  box-shadow: 0 0 4px rgba(204, 204, 204, 0.6);
   animation: dis 3s; }
 
 @keyframes dis {
@@ -14175,7 +14174,9 @@ h5,
 p,
 a {
   color: #001e62;
-  font-family: -apple-system, 'BlinkMacSystemFont', Sans-Serif; }
+  font-family: -apple-system, 'BlinkMacSystemFont', Sans-Serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
 
 h1 {
   font-size: 1em !important;
@@ -14275,12 +14276,13 @@ p {
   .content .contact_button {
     width: 10em;
     height: 2em;
-    margin: 100px auto 0 auto; }
+    margin: 2em auto 0 auto; }
     .content .contact_button button {
       height: 100%;
       width: 100%;
       background-color: #fff;
-      border: solid #001e62 2px; }
+      border: solid #001e62 2px;
+      margin: 1em 0; }
       .content .contact_button button:hover {
         background-color: #001e62; }
         .content .contact_button button:hover h2 {
@@ -14291,6 +14293,32 @@ p {
 
 .Home {
   margin-top: 80px; }
+  .Home .count {
+    margin-bottom: 5em; }
+    .Home .count #countdown {
+      font-size: 1.2em; }
+      .Home .count #countdown span {
+        color: #C63527; }
+        .Home .count #countdown span span {
+          color: #001e62;
+          font-size: 0.4em; }
+  .Home .ob.last {
+    margin-bottom: 2em; }
+  .Home .ob h2 {
+    font-size: 3em;
+    line-height: .9em;
+    text-align: center;
+    opacity: .4;
+    letter-spacing: 0; }
+    .Home .ob h2 .red {
+      color: #C63527; }
+  .Home .ob img {
+    width: 100%;
+    -webkit-filter: grayscale(90%);
+    -moz-filter: grayscale(90%);
+    -ms-filter: grayscale(90%);
+    -o-filter: grayscale(90%);
+    filter: grayscale(90%); }
   .Home svg {
     height: 200px; }
 
@@ -14369,15 +14397,23 @@ p {
   text-shadow: 1px 1px 1px #000; }
 
 .about .inner {
-  width: 80%;
-  margin: 10%; }
+  width: 100%;
+  margin: 0;
+  text-align: center; }
 
 .about p {
-  text-align: center; }
+  text-align: center;
+  height: 4em; }
 
 .about img {
   width: 80%;
   margin: 0 10%; }
 
-.contact p {
-  text-align: center; }
+.contact {
+  height: 10em;
+  margin-bottom: 1em; }
+  .contact p {
+    text-align: center; }
+
+.mail {
+  font-size: 0.5em; }

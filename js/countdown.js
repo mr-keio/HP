@@ -3,6 +3,7 @@ $(document).ready(function () {
     .on('success', function(e) {
       window.alert(e.text + 'をコピーしました')
   })
+  console.log(countdown(new Date(2019, 4, 21)).toHTML())
   setInterval(function () {
     const ts = countdown(new Date(2019, 4, 21)).toHTML()
     const result = ts

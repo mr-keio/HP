@@ -39,9 +39,5 @@
     "rimraf": "^2.6.3",
     "stylelint": "^9.10.1",
     "stylelint-scss": "^3.5.4"
-  },
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "fallback-custom-scheme": "^0.1.4"
   }
 }

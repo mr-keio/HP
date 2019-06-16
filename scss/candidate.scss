@@ -62,12 +62,17 @@ body {
         > .row {
           > .sns {
             height: 3em;
+            .links {
+              display: flex;
+              justify-content: center;
+            }
             .instagram {
               opacity: .6;
             }
 
             img {
-              width: 3em;
+              width: 2em;
+              margin: 0.5em auto;
               filter: grayscale(100%);
             }
           }

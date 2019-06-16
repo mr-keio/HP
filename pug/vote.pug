@@ -10,8 +10,10 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js")
     script(type='text/javascript').
       $(() => {
+        $("img.lazy").lazyload()
         $('#logo').on('click', () => {
           const details = $(`#details`)
           details.removeClass('show')
@@ -197,7 +199,7 @@ html(lang="en")
                       .inner.col-12.col-sm-12.col-md-8.col-lg-6.col-xl-6
                         .infos
                           h2.gray | Entry No.#{i+1}
-                          img(
+                          img.lazy(
                             src=`./assets/candidates/contents/top/no${i+1}.png`
                             alt='face'
                             class=`entryNumber${i+1} link`
@@ -221,7 +223,7 @@ html(lang="en")
                             .row
                               - for(var k = 0; k < candidates[i].contentImages.length; k++)
                                 .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
-                                  img(
+                                  img.lazy(
                                     src=`${candidates[i].contentImages[k]}`
                                     alt='face'
                                   )

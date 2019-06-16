@@ -211,11 +211,12 @@ html(lang="en")
                           .actions.container-fluid.no-gutters
                             .row.no-gutters
                               .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-                                .twitter.sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-                                  img(src='./assets/twitter_Logo.png', alt="")
-                                .instagram.sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-                                  img(src='./assets/instagram_logo.png', alt="")
-                              .vote.sns.inner.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+                                .icons.row
+                                  .twitter.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+                                    img(src='./assets/twitter_Logo.png', alt="")
+                                  .instagram.sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+                                    img(src='./assets/instagram_logo.png', alt="")
+                              .vote.inner.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
                                 button(type="button" class="btn btn-primary") 投票
                           table
                             - for (var j = 0; j < candidates[i].aboutMe.length; j++)

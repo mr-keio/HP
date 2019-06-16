@@ -91,6 +91,9 @@ main {
   
           .infos {
             // display: block;
+            h2 {
+              font-size: 1em !important;
+            }
 
             .actions {
               width: 100%;
@@ -100,8 +103,8 @@ main {
                 justify-content: space-around;
 
                 .img {
-                  width: 2em;
-                  height: auto;
+                  width: 1em;
+                  height: 1em;
                 }
               }
             }

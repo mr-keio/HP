@@ -113,11 +113,15 @@ main {
               position: absolute;
             }
 
-            .contents img {
-              padding: 0;
-              width: 100%;
-              height: auto;
-              margin: 20px 0;
+            .contents {
+              margin-bottom: 2em;
+
+              img {
+                padding: 0;
+                width: 100%;
+                height: auto;
+                margin: 20px 0;
+              }
             }
   
             table {

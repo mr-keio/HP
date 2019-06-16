@@ -13,7 +13,9 @@ html(lang="en")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js")
     script(type='text/javascript').
       $(() => {
-        $("img.lazy").lazyload()
+        $("img.lazy").lazyload({
+          event : 'clickDetail'
+        })
         $('#logo').on('click', () => {
           const details = $(`#details`)
           details.removeClass('show')
@@ -25,6 +27,7 @@ html(lang="en")
       })
         
       function showPop (n) {
+        $("img.lazy").trigger('clickDetail')
         const details = $(`#details`)
         const carousel = $('#carouselExampleControls')
         $('article').scrollTop(0)

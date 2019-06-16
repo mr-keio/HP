@@ -21,7 +21,7 @@ body {
       text-align: center;
       height: calc($header-h-$logo-h);
       margin: 0;
-      font-size: 12px;
+      font-size: 10px;
     }
 
     #logo {
@@ -121,4 +121,34 @@ body {
       }
     }
   }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: #001e62;
+  font-family:
+    Hiragino Sans,
+    "ヒラギノ角ゴシック",
+    Hiragino Kaku Gothic ProN,
+    "ヒラギノ角ゴ ProN W3",
+    Roboto,
+    "Droid Sans",
+    YuGothic,
+    "游ゴシック",
+    Meiryo,
+    "メイリオ",
+    Verdana,
+    "MS Pゴシック",
+    sans-serif;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+p {
+  font-weight: 600;
 }

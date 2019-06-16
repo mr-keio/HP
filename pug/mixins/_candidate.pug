@@ -1,8 +1,7 @@
 
 mixin body (num)
   header
-    .top
-      .logo
+      #logo
         svg(x=0 y=0 viewBox='0 0 200 360')
           polygon(
             points="0 0,0 160, 30 160, 30 80, 100 160, 170 80, 170 160, 200 160, 200 0, 100 120"
@@ -20,12 +19,13 @@ mixin body (num)
             points="0 310, 0 340, 200 340, 200 310"
             fill='#001e62'
           )
-      .title
-        p Mr.KEIO CONTEST 2019
+      p Mr.KEIO CONTENST 2019
   main.container-fluid.no-gutters
     article.row
       .top.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
-        h2.gray | Entry No.#{num}
+        h2.gray
+          span |
+          | Entry No.#{num}
         img(src=`../assets/candidates/contents/top/no${num}.png`, alt="")
       .info.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
         .row.no-gutters
@@ -39,14 +39,15 @@ mixin body (num)
                   a(href=`http://instagram.com/mrkeio_2019_no${num}`)
                     img(src='../assets/instagram_logo.png', alt="")
           .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-            button(type="button" class="btn btn-primary") 投票
+            button(type="button" class="btn btn-primary")
+              p 投票
         .aboutMe.row.no-gutters
           .info.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
             table
               - for (var j = 0; j < candidates[num-1].aboutMe.length; j++)
                 tr
-                  td.ex_small.col-5.col-sm-5.col-md-5.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[0]}
-                  td.ex_small.col-7.col-sm-7.col-md-7.col-lg-6.col-xl-6 ：#{candidates[num-1].aboutMe[j].split('：')[1]}
+                  td.tar.ex_small.col-5.col-sm-5.col-md-5.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[0]}
+                  td.ex_small.col-7.col-sm-7.col-md-7.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[1]}
       .contents.row
           - for (var i = 0; i < 4; i++)
             .content.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-3

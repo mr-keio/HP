@@ -29,7 +29,8 @@ mixin body (num)
           | Entry No.#{num}
         img(src=`../assets/candidates/contents/top/no${num}.png`, alt="")
       .info.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
-        .row.no-gutters
+        .shares.row.no-gutters
+          .col
           .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
             .container-fluid
               .row.no-gutters
@@ -39,7 +40,7 @@ mixin body (num)
                 .links.instagram.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
                   a(href=`http://instagram.com/mrkeio_2019_no${num}`)
                     img(src='../assets/instagram_logo.png', alt="")
-          .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          //- .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
             button(type="button" class="btn btn-primary")
               p 投票
         .aboutMe.row.no-gutters

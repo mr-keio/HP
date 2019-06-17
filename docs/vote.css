@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7025,103 +7026,36 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'Anticon';
   src: url("./assets/anticon.ttf"); }
 
-body {
-  font-family: Anticon; }
-  body header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000; }
-    body header p {
-      text-align: center;
-      height: calc($header-h-$logo-h);
-      margin: 0; }
-    body header #logo {
-      height: 25px;
-      display: flex;
-      justify-content: center; }
-      body header #logo svg {
-        height: 100%; }
-
-main .hide {
-  top: 100%; }
-
-@keyframes hide {
-  0% {
-    opacity: 1;
-    display: block; }
-  100% {
-    opacity: 0;
-    display: none; } }
-
-main .show {
-  display: block;
-  top: 40px; }
-
-@keyframes show {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-main article {
+body header {
   position: fixed;
-  top: 100%;
+  top: 0;
   left: 0;
-  height: 100%;
+  height: 40px;
   width: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  z-index: 100;
-  transition: all 300ms 0.2s ease-in-out; }
-  main article .carousel {
-    height: auto;
-    width: 100%;
-    padding-top: 30px;
-    background-color: #fff; }
-    main article .carousel .carousel-item {
-      width: 100%;
-      transition: transform .4s ease, opacity 0s ease-in-out; }
-      main article .carousel .carousel-item .inner .carousel-control-prev-icon {
-        background-color: #ccc; }
-      main article .carousel .carousel-item .inner .infos .actions {
-        width: 100%; }
-        main article .carousel .carousel-item .inner .infos .actions .sns {
-          display: flex;
-          justify-content: space-around; }
-          main article .carousel .carousel-item .inner .infos .actions .sns .img {
-            width: 2em;
-            height: auto; }
-      main article .carousel .carousel-item .inner .infos h2 {
-        position: absolute; }
-      main article .carousel .carousel-item .inner .infos .contents img {
-        padding: 0;
-        width: 100%;
-        height: auto;
-        margin: 20px 0; }
-      main article .carousel .carousel-item .inner .infos table {
-        width: 100%;
-        height: auto;
-        border: solid 1px #000;
-        border-radius: 10px; }
-        main article .carousel .carousel-item .inner .infos table tr {
-          margin: 5px 0 3px 0;
-          display: flex; }
-    main article .carousel img {
-      width: 100%;
-      height: auto; }
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  body header p {
+    text-align: center;
+    height: calc($header-h-$logo-h);
+    margin: 0; }
+  body header #logo {
+    height: 25px;
+    display: flex;
+    justify-content: center; }
+    body header #logo svg {
+      height: 100%; }
 
 #candidates {
   list-style-type: none;
   padding: 0;
-  margin-top: 40px; }
-  #candidates li img {
-    width: 100%;
-    margin: 6px 0 3px 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  margin-top: 4em; }
+  #candidates a {
+    text-decoration: none; }
+    #candidates a li img {
+      width: 100%;
+      margin: 6px 0 3px 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 html {
   font-size: 12px; }
@@ -7134,7 +7068,7 @@ h5,
 p,
 a {
   color: #001e62;
-  font-family: Anticon;
+  font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "MS Pゴシック", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
@@ -7183,3 +7117,9 @@ p {
 
 .ex_small {
   font-size: 10px; }
+
+.hideContoroller {
+  display: none; }
+
+.showContoroller {
+  display: block; }

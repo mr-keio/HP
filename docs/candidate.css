@@ -1,0 +1,124 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  margin: 0;
+  font-size: 15px; }
+  html header,
+  body header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    html header a,
+    body header a {
+      text-decoration: none; }
+      html header a p,
+      body header a p {
+        text-align: center;
+        height: calc($header-h-$logo-h);
+        margin: 0;
+        font-size: 10px;
+        color: #001e62;
+        text-decoration: none; }
+      html header a #logo,
+      body header a #logo {
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none; }
+        html header a #logo svg,
+        body header a #logo svg {
+          height: 100%; }
+  html main,
+  body main {
+    margin-top: 5em; }
+    html main > article.row,
+    body main > article.row {
+      width: 100%;
+      margin: 0; }
+      html main > article.row > .top > h2,
+      body main > article.row > .top > h2 {
+        color: #aaa;
+        font-size: 1.5em;
+        position: absolute; }
+        html main > article.row > .top > h2 span,
+        body main > article.row > .top > h2 span {
+          font-size: 1.2em; }
+      html main > article.row > .top img,
+      body main > article.row > .top img {
+        width: 100%; }
+      html main > article.row > .info,
+      body main > article.row > .info {
+        margin: 1em 0; }
+        html main > article.row > .info > .row.shares > .sns,
+        body main > article.row > .info > .row.shares > .sns {
+          height: 3em; }
+          html main > article.row > .info > .row.shares > .sns .links,
+          body main > article.row > .info > .row.shares > .sns .links {
+            display: flex;
+            justify-content: center; }
+          html main > article.row > .info > .row.shares > .sns .instagram,
+          body main > article.row > .info > .row.shares > .sns .instagram {
+            opacity: .6; }
+          html main > article.row > .info > .row.shares > .sns img,
+          body main > article.row > .info > .row.shares > .sns img {
+            width: 2em;
+            margin: 0.5em auto;
+            filter: grayscale(100%); }
+        html main > article.row > .info > .row.shares > .vote button,
+        body main > article.row > .info > .row.shares > .vote button {
+          width: 100%;
+          height: 3em;
+          background: linear-gradient(to top left, #666 25%, #eee);
+          border: none; }
+          html main > article.row > .info > .row.shares > .vote button p,
+          body main > article.row > .info > .row.shares > .vote button p {
+            font-size: 1.5em;
+            line-height: 1.5em;
+            font-weight: 500;
+            margin: 0;
+            height: 100%; }
+        html main > article.row > .info .aboutMe,
+        body main > article.row > .info .aboutMe {
+          margin: 1em 0; }
+          html main > article.row > .info .aboutMe table,
+          body main > article.row > .info .aboutMe table {
+            width: 100%;
+            border: solid 1px #ccc; }
+            html main > article.row > .info .aboutMe table .tar,
+            body main > article.row > .info .aboutMe table .tar {
+              text-align: right; }
+            html main > article.row > .info .aboutMe table tr,
+            body main > article.row > .info .aboutMe table tr {
+              margin: 5px 0 3px 0;
+              display: flex; }
+              html main > article.row > .info .aboutMe table tr td,
+              body main > article.row > .info .aboutMe table tr td {
+                font-size: .7em; }
+      html main > article.row > .contents .content,
+      body main > article.row > .contents .content {
+        width: 100%;
+        padding: 2em 30px; }
+        html main > article.row > .contents .content img,
+        body main > article.row > .contents .content img {
+          width: 100%;
+          height: auto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "MS Pゴシック", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
+
+p {
+  font-weight: 600; }

@@ -124,6 +124,31 @@
 .Home {
   margin-top: 80px;
 
+  .over {
+    img {
+      width: 100%;
+      filter: grayscale(100%);
+    }
+    p, h3 {
+      position: absolute;
+      left: 0;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      letter-spacing: .2em;
+      margin: 0;
+    }
+    h3 {
+      bottom: 2em;
+      font-size: 1em;
+    }
+
+    p {
+      bottom: .3em;
+      text-align: center;
+    }
+  }
+
   .count {
     margin-bottom: 5em;
 

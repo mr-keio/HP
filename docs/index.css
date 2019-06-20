@@ -14293,6 +14293,26 @@ p {
 
 .Home {
   margin-top: 80px; }
+  .Home .over {
+    width: 100%;
+    margin: 0; }
+    .Home .over img {
+      width: 100%;
+      filter: grayscale(100%); }
+    .Home .over p, .Home .over h3 {
+      position: absolute;
+      left: 0;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      letter-spacing: .2em;
+      margin: 0; }
+    .Home .over h3 {
+      bottom: 2em;
+      font-size: 1em; }
+    .Home .over p {
+      bottom: .3em;
+      text-align: center; }
   .Home .count {
     margin-bottom: 5em; }
     .Home .count #countdown {

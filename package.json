@@ -27,6 +27,7 @@
     "watch:scss": "node-sass -r scss -w -o dist/",
     "watch:images": "cpx 'assets/**/*' dist/assets --watch",
     "watch:js": "cpx 'js/*' dist/js --watch",
+    "watch:ts": "webpack-dev-server --content-base dist",
     "prebuild": "rimraf dist",
     "prewatch": "yarn run build"
   },

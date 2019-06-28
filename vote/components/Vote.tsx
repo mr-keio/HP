@@ -16,11 +16,11 @@ const Vote: React.SFC<any> = ({
     <Button
       onClick={ready}
     >
-      <p>投票</p>
+      <p id='vote_title'>投票</p>
     </Button>
     <Modal
       title={chooseCandidateId ? `
-        No.${chooseCandidateId} ${chooseCandidateName} へ投票する
+        No.${chooseCandidateId} ${chooseCandidateName} に投票する
       ` : '読み込み中...'}
       visible={isModalVisible}
       centered={true}

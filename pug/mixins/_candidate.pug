@@ -40,9 +40,10 @@ mixin body (num)
                 .links.instagram.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
                   a(href=`http://instagram.com/mrkeio_2019_no${num}`)
                     img(src='../assets/instagram_logo.png', alt="")
-          //- .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-            button(type="button" class="btn btn-primary")
-              p 投票
+          .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+            #vote_button
+              button(type="button" class="btn btn-primary")
+                p 投票
         .aboutMe.row.no-gutters
           .info.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
             table
@@ -54,6 +55,7 @@ mixin body (num)
           - for (var i = 0; i < 4; i++)
             .content.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-3
               img(src=`../assets/candidates/contents/no${num}/${i+1}.jpg`, alt="")
+  script(src='../js/index.bundle.js')
 
 
 mixin head (num)

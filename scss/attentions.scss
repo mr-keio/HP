@@ -1,0 +1,106 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$header-h: 40px;
+body {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-h;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    $logo-h: 25px;
+    
+    p {
+      text-align: center;
+      height: calc($header-h-$logo-h);
+      margin: 0;
+      font-size: .5em;
+    }
+
+    #logo {
+      height: $logo-h;
+      display: flex;
+      justify-content: center;
+
+      svg {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.attentions {
+  h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    font-weight: 500;
+  }
+  ul li {
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: #001e62;
+  font-family:
+    Hiragino Sans,
+    "ヒラギノ角ゴシック",
+    Hiragino Kaku Gothic ProN,
+    "ヒラギノ角ゴ ProN W3",
+    Roboto,
+    "Droid Sans",
+    YuGothic,
+    "游ゴシック",
+    Meiryo,
+    "メイリオ",
+    Verdana,
+    "MS Pゴシック",
+    sans-serif;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 20px;
+  }
+}

@@ -63,7 +63,7 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
 )
 
 function getNow () {
-  return moment(new Date()).format('YYYY-MM-DD-hh-mm').toString()
+  return moment(new Date()).format('YYYY-MM-DD-HH-mm').toString()
 }
 
 function getChooseCandidateId () {

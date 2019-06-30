@@ -113,8 +113,8 @@ const WithHandlers = withHandlers <any, {}> ({
         })
         toggleModalLoading()
       })
-      .catch((error) => {
-        console.log(error)
+      .catch((err) => {
+        message.error(`サーバーとの認証中にエラーが発生しました。時間をおいてアクセスしてください。：${err}`)
       })
   },
   vote: ({
@@ -139,7 +139,7 @@ const WithHandlers = withHandlers <any, {}> ({
       toggleModalVisible()
       message.success('投票しました')
     }).catch((err) => {
-      message.error(`エラーが発生しました：${err}`)
+      message.error(`投票する際にエラーが発生しました。時間をおいて再度アクセスしてください。：${err}`)
     })
   }
 })

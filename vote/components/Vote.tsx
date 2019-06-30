@@ -38,9 +38,9 @@ const Vote: React.SFC<any> = ({
           {
             canVotedToday ? (
               <p>
-                「投票」ボタンを押した時点で
-                <a href='../attentions.html'>投票にあたって</a>
-                をご覧になったとみなして投票します。投票の修正は致しかねます。
+                投票する際に
+                <a href='../attentions.html'>「投票にあたって」</a>
+                をよくお読みください。
               </p>
             ) : (
               <p>

@@ -17,8 +17,10 @@ type State = {
   canVotedToday?: boolean
   isModalLoading?: boolean
   isModalVisible?: boolean
+  isEnableBrowser?: boolean
   now?: string
   uid?: string
+  // userAgent?: string
 }
 
 type StateUpdates = {
@@ -30,17 +32,21 @@ type StateUpdates = {
   }: State) => State
   toggleModalVisible: () => State
   toggleModalLoading: () => State
+  enableBrowser: (b: boolean) => State
+  // setUserAgent: ({ userAgent}: State) => State
 }
 
 const WithStateHandlers = withStateHandlers <State, StateUpdates> (
   {
     isModalLoading: false,
     isModalVisible: false,
+    isEnableBrowser: false,
     canVotedToday: false,
     now: '',
     uid: '',
     chooseCandidateId: null,
-    chooseCandidateName: ''
+    chooseCandidateName: '',
+    // userAgent: ''
   },
   {
     setDefaultStates: (props) => ({
@@ -59,23 +65,34 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
     }),
     toggleModalVisible: ({ isModalVisible }) => () => ({ isModalVisible: !isModalVisible }),
     toggleModalLoading: ({ isModalLoading }) => () => ({ isModalLoading: !isModalLoading }),
+    enableBrowser: () => (b) => ({ isEnableBrowser: b }),
+    // setUserAgent: () => ({ userAgent }) => ({ userAgent })
   }
 )
 
-function getNow () {
+function getNow () : string {
   return moment(new Date()).format('YYYY-MM-DD-HH-mm').toString()
 }
 
-function getChooseCandidateId () {
+function getChooseCandidateId (): string {
   const currentPath = location.href
   const currentFileName = currentPath.split('/')[currentPath.split('/').length-1]
   const chooseCandidateId = currentFileName.split('.')[0].split('no')[1]
   return chooseCandidateId
 }
 
-function getChooseCandidateName (id: number) {
+function getChooseCandidateName (id: number): string {
   return bases[`no${id}`].name
 }
+
+// function isEnableBrowser (): boolean {
+//   const UA = navigator.userAgent
+//   if (UA.match(/instagram/) || UA.match(/FB/)) {
+//     return false
+//   } else {
+//     return true
+//   }
+// }
 
 const WithHandlers = withHandlers <any, {}> ({
   ready: ({
@@ -132,7 +149,8 @@ const WithHandlers = withHandlers <any, {}> ({
     set(`${rootPath}`, {
       [today]: {
         voteFor: chooseCandidateId,
-        date: now
+        date: now,
+        userAgent: navigator.userAgent
       }
     }).then(() => {
       toggleModalLoading()
@@ -146,6 +164,7 @@ const WithHandlers = withHandlers <any, {}> ({
 
 const Lifecycle = lifecycle <any, any> ({
   async componentDidMount () {
+    // this.props.setUserAgent({userAgent: navigator.userAgent})
   }
 })
 

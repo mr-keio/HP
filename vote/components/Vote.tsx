@@ -7,6 +7,7 @@ const Vote: React.SFC<any> = ({
   chooseCandidateName,
   isModalVisible,
   isModalLoading,
+  isEnableBrowser,
   toggleModalVisible,
   vote,
   ready

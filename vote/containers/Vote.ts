@@ -20,6 +20,7 @@ type State = {
   isEnableBrowser?: boolean
   now?: string
   uid?: string
+  // userAgent?: string
 }
 
 type StateUpdates = {
@@ -32,6 +33,7 @@ type StateUpdates = {
   toggleModalVisible: () => State
   toggleModalLoading: () => State
   enableBrowser: (b: boolean) => State
+  // setUserAgent: ({ userAgent}: State) => State
 }
 
 const WithStateHandlers = withStateHandlers <State, StateUpdates> (
@@ -43,7 +45,8 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
     now: '',
     uid: '',
     chooseCandidateId: null,
-    chooseCandidateName: ''
+    chooseCandidateName: '',
+    // userAgent: ''
   },
   {
     setDefaultStates: (props) => ({
@@ -62,7 +65,8 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
     }),
     toggleModalVisible: ({ isModalVisible }) => () => ({ isModalVisible: !isModalVisible }),
     toggleModalLoading: ({ isModalLoading }) => () => ({ isModalLoading: !isModalLoading }),
-    enableBrowser: () => (b) => ({ isEnableBrowser: b })
+    enableBrowser: () => (b) => ({ isEnableBrowser: b }),
+    // setUserAgent: () => ({ userAgent }) => ({ userAgent })
   }
 )
 
@@ -81,14 +85,14 @@ function getChooseCandidateName (id: number): string {
   return bases[`no${id}`].name
 }
 
-function isEnableBrowser (): boolean {
-  const UA = navigator.userAgent
-  if (UA.match(/instagram/) || UA.match(/FB/)) {
-    return false
-  } else {
-    return true
-  }
-}
+// function isEnableBrowser (): boolean {
+//   const UA = navigator.userAgent
+//   if (UA.match(/instagram/) || UA.match(/FB/)) {
+//     return false
+//   } else {
+//     return true
+//   }
+// }
 
 const WithHandlers = withHandlers <any, {}> ({
   ready: ({
@@ -145,7 +149,8 @@ const WithHandlers = withHandlers <any, {}> ({
     set(`${rootPath}`, {
       [today]: {
         voteFor: chooseCandidateId,
-        date: now
+        date: now,
+        userAgent: navigator.userAgent
       }
     }).then(() => {
       toggleModalLoading()
@@ -159,7 +164,7 @@ const WithHandlers = withHandlers <any, {}> ({
 
 const Lifecycle = lifecycle <any, any> ({
   async componentDidMount () {
-    this.props.enableBrowser(isEnableBrowser())
+    // this.props.setUserAgent({userAgent: navigator.userAgent})
   }
 })
 

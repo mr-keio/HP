@@ -41,6 +41,7 @@ const Vote: React.SFC<any> = ({
                 投票する際に
                 <a href='../attentions.html'>「投票にあたって」</a>
                 をよくお読みください。
+                {navigator.userAgent}
               </p>
             ) : (
               <p>

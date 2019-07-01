@@ -35,28 +35,22 @@ const Vote: React.SFC<any> = ({
       onCancel={toggleModalVisible}
     >
       {
-        isEnableBrowser ? <React.Fragment>
+        chooseCandidateId ? <React.Fragment>
           {
-            chooseCandidateId ? <React.Fragment>
-              {
-                canVotedToday ? (
-                  <p>
-                    投票する際に
-                    <a href='../attentions.html'>「投票にあたって」</a>
-                    をよくお読みください。
-                    {navigator.userAgent}
-                  </p>
-                ) : (
-                  <p>
-                    本日分の投票は済んでいます．明日以降の投票をお待ちしています．
-                  </p>
-                )
-              }
-            </React.Fragment> : 'しばらくお待ちください。'
+            canVotedToday ? (
+              <p>
+                投票する際に
+                <a href='../attentions.html'>「投票にあたって」</a>
+                をよくお読みください。
+                {isEnableBrowser}
+              </p>
+            ) : (
+              <p>
+                本日分の投票は済んでいます．明日以降の投票をお待ちしています．
+              </p>
+            )
           }
-        </React.Fragment> : <p>
-          ブラウザアプリケーション（Safari、Google Chromeなど）からアクセスしてください。
-        </p>
+        </React.Fragment> : 'しばらくお待ちください。'
       }
     </Modal>
   </React.Fragment>

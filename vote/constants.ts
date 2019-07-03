@@ -23,7 +23,7 @@ export const bases: Base = {
     id: 'No4'
   },
   no5: {
-    name: '三船靖司',
+    name: '三舩靖司',
     id: 'No5'
   },
   no6: {

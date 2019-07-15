@@ -65,9 +65,13 @@ main.container {
   .row {
     margin-top: 5em;
   }
-  .image img {
-    width: 100%;
+  .image {
     height: auto;
+
+    img {
+      width: 100% !important;
+      height: 300px;
+    }
   }
   .shirts {
     margin-bottom: 5em;

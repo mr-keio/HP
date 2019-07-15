@@ -7065,9 +7065,11 @@ main.container {
   margin-top: 2em; }
   .products .row {
     margin-top: 5em; }
-  .products .image img {
-    width: 100%;
+  .products .image {
     height: auto; }
+    .products .image img {
+      width: 100% !important;
+      height: 300px; }
   .products .shirts {
     margin-bottom: 5em; }
     .products .shirts img {

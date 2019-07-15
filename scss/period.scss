@@ -1,0 +1,196 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+// @import './_font-size';
+
+@font-face {
+	font-family: 'Anticon';
+	src: url('./assets/anticon.ttf');
+}
+
+$header-h: 60px;
+
+body {
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-h;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    $logo-h: 50px;
+
+    #logo {
+      height: $logo-h;
+      display: flex;
+      justify-content: center;
+      margin-top: .3em;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+main.container {
+  margin-top: 7em;
+}
+
+.row.explain .text-box {
+  width: 100%;
+  height: 10em;
+  margin-top: 3em;
+  border: solid 1px #ccc;
+  border-radius: 1px;
+}
+
+.links {
+  margin-top: 2em;
+  .icon {
+    margin: 0 auto;
+    width: 3em;
+  }
+  img {
+    height: 3em;
+  
+  }
+}
+
+.products {
+  margin-top: 2em;
+  .row {
+    margin-top: 5em;
+  }
+  .image img {
+    width: 100%;
+  }
+  .shirts {
+    margin-bottom: 5em;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.row.form .bt {
+  width: 100%;
+  height: 4em;
+  margin-top: 2em;
+  border-top: solid 2px #aaa;
+  border-bottom: solid 2px #aaa;
+  border-left: solid 1px #aaa;
+  border-right: solid 1px #aaa;
+  box-sizing: border-box;
+
+  p {
+    line-height: 4.3em;
+    font-size: .8em;
+    text-align: center;
+  }
+}
+
+html {
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: #001e62;
+  font-family:
+    Hiragino Sans,
+    "ヒラギノ角ゴシック",
+    Hiragino Kaku Gothic ProN,
+    "ヒラギノ角ゴ ProN W3",
+    Roboto,
+    "Droid Sans",
+    YuGothic,
+    "游ゴシック",
+    Meiryo,
+    "メイリオ",
+    Verdana,
+    "MS Pゴシック",
+    sans-serif;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 1em !important;
+  letter-spacing: 0;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: .5em !important;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 0.7em;
+}
+
+p {
+  font-size: 0.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 15px;
+  }
+}
+ 
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 15px; 
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 20px;
+  }
+}
+
+.gray {
+  color: #777;
+}
+
+.no_margin {
+  margin: 0;
+}
+
+.fill {
+  background-color: #fff;
+}
+
+.ex_small {
+  font-size: 10px;
+}
+
+
+.hideContoroller {
+  display: none;
+}
+
+.showContoroller {
+  display: block;
+}

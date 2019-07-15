@@ -16,7 +16,7 @@ html(lang="en")
     head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#')
     meta(property='og:url' content='https://keio.mrcontest.jp')
     meta(property='og:type' content='website') 
-    meta(property='og:title' content='Mr.KEIO(ミスター慶應) × period コラボ')
+    meta(property='og:title' content='Mr.KEIO(ミスター慶應) × PERIOD コラボ')
     meta(property='og:description' content='Mr.KEIO CONTEST 2019 とPERIOD がコラボし、2019年8月10日にTシャツをはじめとした様々なグッズの販売会を行います。実際にミスター慶應ファイナリストが店頭に立って販売を行います！！')
     meta(property='og:site_name' content='Mr.KEIO CONTEST 2019 × PERIOD')
     meta(property='og:image' content='https://keio.mrcontest.jp/assets/logo.png')
@@ -38,8 +38,8 @@ html(lang="en")
     // 最終選考者リスト
     main.container
       .row
-        .col-1.col-sm-1.col-md-4.col-lg-4.col-xl-4
-        .col-10.col-sm-10.col-md-4.col-lg-4.col-xl-4
+        .col-2.col-sm-2.col-md-4.col-lg-4.col-xl-4
+        .col-8.col-sm-8.col-md-4.col-lg-4.col-xl-4
           .carousel.slide.carousel-fade(data-ride='carousel' data-interval='3000')
             .carousel-inner
               .carousel-item.active
@@ -54,7 +54,7 @@ html(lang="en")
                 img.d-block.w-100(src='./assets/period/no5.png', alt="")
               .carousel-item
                 img.d-block.w-100(src='./assets/period/no6.png', alt="")
-          .col-1.col-sm-1.col-md-4.col-lg-4.col-xl-4
+          .col-2.col-sm-2.col-md-4.col-lg-4.col-xl-4
       .row.explain
         .col-1.col-sm-1.col-md-4.col-lg-4.col-xl-4
         .col-10.col-sm-10.col-md-4.col-lg-4.col-xl-4
@@ -80,11 +80,10 @@ html(lang="en")
               p 8/10 販売会 予約フォーム
         .col-1.col-sm-1.col-md-4.col-lg-4.col-xl-4
     .products.container-fluid
+      .row.shirts
+        .col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          img(src='./assets/period/product_black.png', alt="")
+        .col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          img(src='./assets/period/product_white.png', alt="")
       .row.image
         img(src='./assets/period/description.png', alt="")
-      .row.shirts
-        .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
-          img(src='./assets/period/product_black.png', alt="")
-        .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
-          img(src='./assets/period/product_white.png', alt="")
-

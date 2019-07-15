@@ -7066,7 +7066,8 @@ main.container {
   .products .row {
     margin-top: 5em; }
   .products .image img {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
   .products .shirts {
     margin-bottom: 5em; }
     .products .shirts img {

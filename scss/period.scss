@@ -1,6 +1,5 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-// @import './_font-size';
 
 @font-face {
 	font-family: 'Anticon';
@@ -71,6 +70,7 @@ main.container {
 
 .products {
   margin-top: 2em;
+  padding: 0;
   .row {
     margin-top: 5em;
   }

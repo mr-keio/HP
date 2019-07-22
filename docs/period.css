@@ -7068,7 +7068,8 @@ main.container {
     height: 3em; }
 
 .products {
-  margin-top: 2em; }
+  margin-top: 2em;
+  padding: 0; }
   .products .row {
     margin-top: 5em; }
   .products .image {

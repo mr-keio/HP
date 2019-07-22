@@ -45,13 +45,15 @@ main.container {
   margin-top: 3em;
   border: solid 1px #ccc;
   border-radius: 1px;
+
   p {
     line-height: 1.6em;
     color: #000;
     font-weight: 300;
+    margin: 1em .4em;
 
     &.title {
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 }

@@ -7056,8 +7056,8 @@ main.container {
     line-height: 1.6em;
     color: #000;
     font-weight: 300; }
-    .row.explain .text-box p.second {
-      margin-top: 1em; }
+    .row.explain .text-box p.title {
+      font-weight: 500; }
 
 .links {
   margin-top: 2em; }
@@ -7095,7 +7095,7 @@ main.container {
       font-weight: 300;
       color: #fff;
       height: 9em;
-      line-height: 2em; }
+      line-height: 1.8em; }
       .products .des p.first {
         margin-top: 5em; }
       .products .des p.second {
@@ -7143,7 +7143,7 @@ h3 {
   font-size: 0.7em; }
 
 p {
-  font-size: 1em;
+  font-size: .9em;
   font-weight: 600;
   line-height: 1.4em; }
 

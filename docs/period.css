@@ -7048,10 +7048,16 @@ main.container {
 
 .row.explain .text-box {
   width: 100%;
-  height: 10em;
+  height: auto;
   margin-top: 3em;
   border: solid 1px #ccc;
   border-radius: 1px; }
+  .row.explain .text-box p {
+    line-height: 1.6em;
+    color: #000;
+    font-weight: 300; }
+    .row.explain .text-box p.second {
+      margin-top: 1em; }
 
 .links {
   margin-top: 2em; }
@@ -7068,12 +7074,32 @@ main.container {
   .products .image {
     height: auto; }
     .products .image img {
-      width: 100% !important;
-      height: 300px; }
-  .products .shirts {
-    margin-bottom: 5em; }
-    .products .shirts img {
       width: 100%; }
+  .products .des {
+    background: no-repeat url("./assets/period/des.jpg");
+    background-size: 100% auto;
+    width: 100%;
+    height: 22em;
+    margin-bottom: 5em; }
+    .products .des:before {
+      content: '';
+      position: relative;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .products .des p {
+      font-weight: 300;
+      color: #fff;
+      height: 9em;
+      line-height: 2em; }
+      .products .des p.first {
+        margin-top: 5em; }
+      .products .des p.second {
+        margin-top: 1em; }
 
 .row.form .bt {
   width: 100%;
@@ -7085,8 +7111,7 @@ main.container {
   border-right: solid 1px #aaa;
   box-sizing: border-box; }
   .row.form .bt p {
-    line-height: 4.3em;
-    font-size: .8em;
+    line-height: 4em;
     text-align: center; }
 
 html {
@@ -7118,7 +7143,7 @@ h3 {
   font-size: 0.7em; }
 
 p {
-  font-size: 0.5em;
+  font-size: 1em;
   font-weight: 600;
   line-height: 1.4em; }
 

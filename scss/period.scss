@@ -42,10 +42,19 @@ main.container {
 
 .row.explain .text-box {
   width: 100%;
-  height: 10em;
+  height: auto;
   margin-top: 3em;
   border: solid 1px #ccc;
   border-radius: 1px;
+  p {
+    line-height: 1.6em;
+    color: #000;
+    font-weight: 300;
+
+    &.second {
+      margin-top: 1em;
+    }
+  }
 }
 
 .links {
@@ -69,14 +78,40 @@ main.container {
     height: auto;
 
     img {
-      width: 100% !important;
-      height: 300px;
+      width: 100%;
+      // height: 300px;
     }
   }
-  .shirts {
+  .des {
+    background: no-repeat url('./assets/period/des.jpg');
+    background-size:100% auto;
+    width: 100%;
+    height: 22em;
     margin-bottom: 5em;
-    img {
+
+    &:before {
+      content: '';
+      position: relative;
+      height: 100%;
       width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-weight: 300;
+      color: #fff;
+      height: 9em;
+      line-height: 2em;
+      &.first {
+        margin-top: 5em;
+      }
+      &.second {
+        margin-top: 1em;
+      }
     }
   }
 }
@@ -92,8 +127,7 @@ main.container {
   box-sizing: border-box;
 
   p {
-    line-height: 4.3em;
-    font-size: .8em;
+    line-height: 4em;
     text-align: center;
   }
 }
@@ -146,7 +180,7 @@ h3 {
 }
 
 p {
-  font-size: 0.5em;
+  font-size: 1em;
   font-weight: 600;
   line-height: 1.4em;
 }

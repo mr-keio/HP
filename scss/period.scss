@@ -44,7 +44,7 @@ main.container {
   height: auto;
   margin-top: 3em;
   border: solid 1px #ccc;
-  border-radius: 1px;
+  border-radius: 2px;
 
   p {
     line-height: 1.6em;
@@ -108,6 +108,7 @@ main.container {
       color: #fff;
       height: 9em;
       line-height: 1.8em;
+      margin: 0 1em;
       &.first {
         margin-top: 5em;
       }

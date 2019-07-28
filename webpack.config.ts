@@ -7,7 +7,7 @@ export default {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.join(__dirname, 'dist', 'js'),
+    path: path.join(__dirname, 'docs', 'js'),
   },
   module: {
     rules: [

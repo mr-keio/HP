@@ -5,7 +5,7 @@ import {
   withStateHandlers
 } from 'recompose'
 import * as moment from 'moment'
-import { message } from 'antd'
+import { message, Modal } from 'antd'
 import { bases } from '../constants'
 
 import VoteComponentsfrom from '../components/Vote'
@@ -20,6 +20,8 @@ type State = {
   isEnableBrowser?: boolean
   now?: string
   uid?: string
+  myVotes?: object
+  happyWindow?: boolean
   // userAgent?: string
 }
 
@@ -33,6 +35,8 @@ type StateUpdates = {
   toggleModalVisible: () => State
   toggleModalLoading: () => State
   enableBrowser: (b: boolean) => State
+  setMyVotes: (votes: State) => State
+  toggleHappyWindow: () => State
   // setUserAgent: ({ userAgent}: State) => State
 }
 
@@ -46,6 +50,8 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
     uid: '',
     chooseCandidateId: null,
     chooseCandidateName: '',
+    myVotes: {},
+    happyWindow: false
     // userAgent: ''
   },
   {
@@ -63,9 +69,11 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
       chooseCandidateId,
       chooseCandidateName
     }),
-    toggleModalVisible: ({ isModalVisible }) => () => ({ isModalVisible: !isModalVisible }),
-    toggleModalLoading: ({ isModalLoading }) => () => ({ isModalLoading: !isModalLoading }),
-    enableBrowser: () => (b) => ({ isEnableBrowser: b }),
+    toggleModalVisible: (props) => () => ({ ...props, isModalVisible: !props.isModalVisible }),
+    toggleModalLoading: (props) => () => ({ ...props, isModalLoading: !props.isModalLoading }),
+    toggleHappyWindow: (props) => () => ({ ...props, happyWindow: !props.happyWindow }),
+    enableBrowser: (props) => (b) => ({ ...props, isEnableBrowser: b }),
+    setMyVotes: (props) => (myVotes) => ({ ...props, myVotes })
     // setUserAgent: () => ({ userAgent }) => ({ userAgent })
   }
 )
@@ -98,7 +106,8 @@ const WithHandlers = withHandlers <any, {}> ({
   ready: ({
     setDefaultStates,
     toggleModalLoading,
-    toggleModalVisible
+    toggleModalVisible,
+    setMyVotes
   }) => () => {
     toggleModalLoading()
     toggleModalVisible()
@@ -109,6 +118,9 @@ const WithHandlers = withHandlers <any, {}> ({
 
         const voterPath = `/voters/${uid}/`
         const myVotes = (await read(voterPath)).val()
+
+        setMyVotes(myVotes)
+
         const compare = now.split('-').slice(0, 3).join('-')
         let flag = 0
         if (myVotes) {
@@ -139,8 +151,11 @@ const WithHandlers = withHandlers <any, {}> ({
     chooseCandidateId,
     now,
     uid,
+    myVotes,
     toggleModalLoading,
-    toggleModalVisible
+    toggleModalVisible,
+    toggleHappyWindow,
+    chooseCandidateName
   }) => () => {
     if (!canVotedToday) return
     const rootPath = `/voters/${uid}`
@@ -155,7 +170,32 @@ const WithHandlers = withHandlers <any, {}> ({
     }).then(() => {
       toggleModalLoading()
       toggleModalVisible()
-      message.success('投票しました')
+
+      let info: any = {}
+      Object.keys(myVotes).forEach((date) => {
+        console.log(myVotes[date])
+        
+        const { voteFor } = myVotes[date]
+        if (typeof info[voteFor] === 'number') {
+          info[voteFor] += 1
+        } else {
+          info[voteFor] = 1
+        }
+      })
+
+      if (
+        info[chooseCandidateId] === 1 ||
+        info[chooseCandidateId] === 5 ||
+        ( info[chooseCandidateId] <= 50 && info[chooseCandidateId] % 10 === 0) ||
+        ( info[chooseCandidateId] > 50 && info[chooseCandidateId] % 50 === 0)
+      ) {
+        const modal = Modal.success({
+          title: 'おめでとうございます！',
+          content:　`${chooseCandidateName}への記念すべき${info[chooseCandidateId]}回目の投票です！`
+        })
+      } else {
+        message.success('投票しました')
+      }
     }).catch((err) => {
       message.error(`投票する際にエラーが発生しました。時間をおいて再度アクセスしてください。：${err}`)
     })

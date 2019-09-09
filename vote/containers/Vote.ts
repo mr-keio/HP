@@ -36,7 +36,6 @@ type StateUpdates = {
   toggleModalLoading: () => State
   enableBrowser: (b: boolean) => State
   setMyVotes: (votes: State) => State
-  toggleHappyWindow: () => State
   // setUserAgent: ({ userAgent}: State) => State
 }
 
@@ -71,7 +70,6 @@ const WithStateHandlers = withStateHandlers <State, StateUpdates> (
     }),
     toggleModalVisible: (props) => () => ({ ...props, isModalVisible: !props.isModalVisible }),
     toggleModalLoading: (props) => () => ({ ...props, isModalLoading: !props.isModalLoading }),
-    toggleHappyWindow: (props) => () => ({ ...props, happyWindow: !props.happyWindow }),
     enableBrowser: (props) => (b) => ({ ...props, isEnableBrowser: b }),
     setMyVotes: (props) => (myVotes) => ({ ...props, myVotes })
     // setUserAgent: () => ({ userAgent }) => ({ userAgent })
@@ -154,7 +152,6 @@ const WithHandlers = withHandlers <any, {}> ({
     myVotes,
     toggleModalLoading,
     toggleModalVisible,
-    toggleHappyWindow,
     chooseCandidateName
   }) => () => {
     if (!canVotedToday) return
@@ -171,18 +168,22 @@ const WithHandlers = withHandlers <any, {}> ({
       toggleModalLoading()
       toggleModalVisible()
 
-      let info: any = {}
-      Object.keys(myVotes).forEach((date) => {
-        console.log(myVotes[date])
-        
-        const { voteFor } = myVotes[date]
-        if (typeof info[voteFor] === 'number') {
-          info[voteFor] += 1
-        } else {
-          info[voteFor] = 1
-        }
-      })
+      message.success('投票しました')
 
+      let info: any = {}
+      if (myVotes) {
+        Object.keys(myVotes).forEach((date) => {
+          const { voteFor } = myVotes[date]
+          if (typeof info[voteFor] === 'number') {
+            info[voteFor] += 1
+          } else {
+            info[voteFor] = 1
+          }
+        })
+      } else {
+        info[chooseCandidateId] = 1
+      }
+      
       if (info[chooseCandidateId]) {
         if (
           info[chooseCandidateId] === 1 ||
@@ -191,22 +192,19 @@ const WithHandlers = withHandlers <any, {}> ({
           ( info[chooseCandidateId] > 50 && info[chooseCandidateId] % 50 === 0)
         ) {
           const modal = Modal.success({
-            title: 'おめでとうございます！',
+            title: 'おめでとうございます！🎉',
             content:　`${chooseCandidateName}への記念すべき${info[chooseCandidateId]}回目の投票です！`
           })
-        } else {
-          message.success('投票しました')
         }
       }
     }).catch((err) => {
-      message.error(`投票する際にエラーが発生しました。時間をおいて再度アクセスしてください。：${err}`)
+      message.error(`エラーが発生しました。時間をおいて再度アクセスしてください。：${err}`)
     })
   }
 })
 
 const Lifecycle = lifecycle <any, any> ({
   async componentDidMount () {
-    // this.props.setUserAgent({userAgent: navigator.userAgent})
   }
 })
 

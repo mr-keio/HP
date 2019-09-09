@@ -183,18 +183,20 @@ const WithHandlers = withHandlers <any, {}> ({
         }
       })
 
-      if (
-        info[chooseCandidateId] === 1 ||
-        info[chooseCandidateId] === 5 ||
-        ( info[chooseCandidateId] <= 50 && info[chooseCandidateId] % 10 === 0) ||
-        ( info[chooseCandidateId] > 50 && info[chooseCandidateId] % 50 === 0)
-      ) {
-        const modal = Modal.success({
-          title: 'おめでとうございます！',
-          content:　`${chooseCandidateName}への記念すべき${info[chooseCandidateId]}回目の投票です！`
-        })
-      } else {
-        message.success('投票しました')
+      if (info[chooseCandidateId]) {
+        if (
+          info[chooseCandidateId] === 1 ||
+          info[chooseCandidateId] === 5 ||
+          ( info[chooseCandidateId] <= 50 && info[chooseCandidateId] % 10 === 0) ||
+          ( info[chooseCandidateId] > 50 && info[chooseCandidateId] % 50 === 0)
+        ) {
+          const modal = Modal.success({
+            title: 'おめでとうございます！',
+            content:　`${chooseCandidateName}への記念すべき${info[chooseCandidateId]}回目の投票です！`
+          })
+        } else {
+          message.success('投票しました')
+        }
       }
     }).catch((err) => {
       message.error(`投票する際にエラーが発生しました。時間をおいて再度アクセスしてください。：${err}`)

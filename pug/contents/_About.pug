@@ -2,11 +2,11 @@ extends ../common/_content-layout.pug
 include ../mixins/_content.pug
 
 block title
-  +title('ABOUT')
+  +title('Qualification')
 
 block sub_title
   .ta_center
-    +sub_title('Mr.KEIO CONTEST 2019 が約束すること')
+    +sub_title('Mr.KEIO CONTEST 2020の応募条件')
 
 block main
   .about
@@ -16,12 +16,11 @@ block main
           img(src='./assets/claim1.png')
           p 個性・挑戦の尊重
       .col
-      .col-10.col-sm-8.col-md-4.col-lg-4.col-xl-3
+      .col-10.col-sm-8.col-md-8.col-lg-8.col-xl-8
         .inner.b
-          img(src='./assets/claim2.png' alt='')
-          h3 グランプリ賞金100万円
-            br
-            |(推薦者10万円)
+          ul
+            li 2021年3月まで、慶應義塾大学に在籍する現役学部生
+            li 5/10（日）、17（日）の選考に両日とも参加可能な者
       .col
       //- .col-4.col-sm-4.col-md-4.col-lg-4.col-xl-4
         .inner

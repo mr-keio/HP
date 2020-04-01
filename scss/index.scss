@@ -174,7 +174,7 @@ $grey: 90%;
     }
 
     h2  {
-      font-size: 3em;
+      font-size: 2em;
       line-height: .9em;
       text-align: center;
       opacity: .4;
@@ -323,9 +323,20 @@ $grey: 90%;
   .inner {
     width: 100%;
     margin: 0;
-    text-align: center;
+    text-align: left;
 
     &.b {
+      ul {
+        text-decoration: none;
+        font-size: 0.6em;
+        color: #001e62;
+
+        li {
+          list-style-type: none;
+          margin-top: 1em;
+          text-align: center;
+        }
+      }
       // border-right: solid 1px #001e62;
     }
   }

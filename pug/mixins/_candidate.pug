@@ -52,7 +52,7 @@ mixin body (num)
                 tr
                   td.tar.ex_small.col-5.col-sm-5.col-md-5.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[0]}
                   td.ex_small.col-7.col-sm-7.col-md-7.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[1]}
-      //- .contents.row
+      .contents.row
           - for (var i = 0; i < 4; i++)
             .content.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-3
               img(src=`../assets/candidates/contents/no${num}/${i+1}.jpg`, alt="")

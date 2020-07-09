@@ -27,11 +27,12 @@ mixin body (num)
         h2.gray
           span |
           | Entry No.#{num}
-        img(src=`../assets/candidates/contents/top/no${num}.png`, alt="")
+        img(src=`../assets/candidates/profiles/0${num}.jpg`, alt="")
       .info.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
         .shares.row.no-gutters
           .col
-          .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          //- .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          .sns.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
             .container-fluid
               .row.no-gutters
                 .links.twitter.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
@@ -40,7 +41,7 @@ mixin body (num)
                 .links.instagram.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
                   a(href=`http://instagram.com/mrkeio_2020_no${num}`)
                     img(src='../assets/instagram_logo.png', alt="")
-          .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          //- .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
             #vote_button
               //- button(type="button" class="btn btn-primary")
                 p 投票
@@ -51,7 +52,7 @@ mixin body (num)
                 tr
                   td.tar.ex_small.col-5.col-sm-5.col-md-5.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[0]}
                   td.ex_small.col-7.col-sm-7.col-md-7.col-lg-6.col-xl-6 #{candidates[num-1].aboutMe[j].split('：')[1]}
-      .contents.row
+      //- .contents.row
           - for (var i = 0; i < 4; i++)
             .content.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-3
               img(src=`../assets/candidates/contents/no${num}/${i+1}.jpg`, alt="")

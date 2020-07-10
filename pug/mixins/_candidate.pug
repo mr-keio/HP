@@ -6,19 +6,19 @@ mixin body (num)
         svg(x=0 y=0 viewBox='0 0 200 360')
           polygon(
             points="0 0,0 160, 30 160, 30 80, 100 160, 170 80, 170 160, 200 160, 200 0, 100 120"
-            fill="#001e62"
+            fill="#C63527"
           )
           polygon(
             points="0 190, 0 220, 200 220, 200 190"
-            fill='#001e62'
-          )
-          polygon(
-            points="0 250, 0 280, 200 280, 200 250"
             fill='#C63527'
           )
           polygon(
-            points="0 310, 0 340, 200 340, 200 310"
+            points="0 250, 0 280, 200 280, 200 250"
             fill='#001e62'
+          )
+          polygon(
+            points="0 310, 0 340, 200 340, 200 310"
+            fill='#C63527'
           )
       p Mr.KEIO CONTEST 2020
   main.container-fluid.no-gutters
@@ -27,24 +27,25 @@ mixin body (num)
         h2.gray
           span |
           | Entry No.#{num}
-        img(src=`../assets/candidates/contents/top/no${num}.png`, alt="")
+        img(src=`../assets/candidates/profiles/0${num}.jpg`, alt="")
       .info.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
         .shares.row.no-gutters
           .col
-          .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          //- .sns.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          .sns.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
             .container-fluid
               .row.no-gutters
                 .links.twitter.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-                  a(href=`http://twitter.com/mrkeio_2020_no${num}`)
+                  a(href=`http://twitter.com/mrkeio2020_no${num}` target='_blank')
                     img(src='../assets/twitter_Logo.png', alt="")
                 .links.instagram.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
-                  a(href=`http://instagram.com/mrkeio_2020_no${num}`)
+                  a(href=`http://instagram.com/mrkeio2020_no${num}` target='_blank')
                     img(src='../assets/instagram_logo.png', alt="")
-          .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
+          //- .vote.col-6.col-sm-6.col-md-6.col-lg-6.col-xl-6
             #vote_button
               //- button(type="button" class="btn btn-primary")
                 p 投票
-        .aboutMe.row.no-gutters
+        //- .aboutMe.row.no-gutters
           .info.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
             table
               - for (var j = 0; j < candidates[num-1].aboutMe.length; j++)
@@ -72,7 +73,7 @@ mixin head (num)
     meta(property='og:url' content='https://keio.mrcontest.jp')
     meta(property='og:type' content='website') 
     meta(property='og:title' content=`Mr.KEIO CONTEST 2020 Entry No.${num} ${candidates[num-1].ja}`)
-    meta(property='og:description' content=`Mr.KEIO CONTEST 2020 Entry No.${num}。2020年7月1日から投票を開始します`)
+    meta(property='og:description' content=`Mr.KEIO CONTEST 2020 Entry No.${num}。2020年7月25日から投票を開始します`)
     meta(property='og:site_name' content='Mr.KEIO CONTEST 2020')
     meta(property='og:image' content=`https://keio.mrcontest.jp/assets/candidates/profiles/no${num}.jpg`)
 

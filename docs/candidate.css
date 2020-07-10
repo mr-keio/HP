@@ -44,8 +44,7 @@ body {
       html main > article.row > .top > h2,
       body main > article.row > .top > h2 {
         color: #aaa;
-        font-size: 1.5em;
-        position: absolute; }
+        font-size: 1.5em; }
         html main > article.row > .top > h2 span,
         body main > article.row > .top > h2 span {
           font-size: 1.2em; }

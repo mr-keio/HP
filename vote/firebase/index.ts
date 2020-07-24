@@ -5,7 +5,7 @@ import 'firebase/database'
 const config = {
   apiKey: "AIzaSyDDPY5xvd5gyAgSc10Cw98KDPeucfYtOIk",
   authDomain: "mr-keio-voting-system.firebaseapp.com",
-  databaseURL: "https://mr-keio-voting-system.firebaseio.com",
+  databaseURL: "https://mr-keio-voting-system-2020.firebaseio.com/",
   projectId: "mr-keio-voting-system",
   storageBucket: "mr-keio-voting-system.appspot.com",
   messagingSenderId: "917034356718"

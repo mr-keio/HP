@@ -7,27 +7,27 @@ type Base = {
 
 export const bases: Base = {
   no1: {
-    name: '木下太貴',
+    name: '白木慈恩',
     id: 'No1'
   },
   no2: {
-    name: '西垣匠一郎',
+    name: '増田龍暉',
     id: 'No2'
   },
   no3: {
-    name: 'ウッズ・プレスコット 礼',
+    name: '藤本悠太郎',
     id: 'No3'
   },
   no4: {
-    name: '落合俊哉',
+    name: '井出毅',
     id: 'No4'
   },
   no5: {
-    name: '三舩靖司',
+    name: '天野歩',
     id: 'No5'
   },
   no6: {
-    name: '相原裕',
+    name: '風晴井吾',
     id: 'No6'
   }
 }

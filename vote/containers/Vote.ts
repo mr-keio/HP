@@ -150,7 +150,7 @@ const WithHandlers = withHandlers <any, {}> ({
       [today]: {
         voteFor: chooseCandidateId,
         date: now,
-        userAgent: navigator.userAgent
+        // userAgent: navigator.userAgent
       }
     }).then(() => {
       toggleModalLoading()
